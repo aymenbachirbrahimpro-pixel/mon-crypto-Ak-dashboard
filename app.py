@@ -62,7 +62,7 @@ def color_rsi(val):
     return ''
 
 # Affichage stylisé
-styled_df = df_rsi.style.applymap(color_rsi, subset=timeframes)
+styled_df = df_rsi.style.map(color_rsi, subset=timeframes)
 st.dataframe(styled_df, height=850, use_container_width=True)
 
 st.caption("Légende : 🔴 Rouge = Surachat (RSI ≥ 70) | 🟢 Vert = Survente (RSI ≤ 30) | Données en direct de l'API Binance Spot.")
