@@ -69,7 +69,5 @@ st.caption("Légende : 🔴 Rouge = Surachat (RSI ≥ 70) | 🟢 Vert = Survente
 
 # Lancement de l'application locale (Utile pour Google Colab)
 import os
-if _name_ == '_main_':
-    with open("app.py", "w") as f:
-        f.write(open(_file_).read())
-    os.system("npx localtunnel --port 8501 & streamlit run app.py --server.port 8501")
+if __name__ == '__main__':
+    pass
